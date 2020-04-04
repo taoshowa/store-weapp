@@ -1,0 +1,18 @@
+/**app.wxss**/
+@import './styles/index.wxss';
+
+page {
+  height: 100%;
+  font-family: PingFang SC;
+  background-color: #fafafc;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  min-height: 100%;
+}
+
+view, input, textarea {
+  box-sizing: border-box;
+}

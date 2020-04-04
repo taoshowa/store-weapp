@@ -1,0 +1,30 @@
+<!--pages/good/good.wxml-->
+<view wx:if="{{good}}" class="container">
+  <view class="good-imgs">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="#E8E8E8" indicator-active-color="#FFBEA6" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper">
+      <block wx:for="{{good.imgUrl}}" wx:key="{{index}}">
+        <swiper-item class="swiper-item" data-index="{{index}}" bind:tap="previewImage">
+          <image src="{{item}}" class="swiper-image" mode="aspectFill" lazy-load/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="good-info">
+    <view class="good-name">{{good.productName}}</view>
+    <view class="good-intro">{{good.productIntro}}</view>
+    <view class="good-price">￥{{good.price}}</view>
+  </view>
+
+  <view class="good-detail">
+    <view class="detail-title">商品详情</view>
+    <view class="detail-desc">
+      <text>{{good.productDesc}}</text>
+    </view>
+  </view>
+
+  <fixed-button>
+    <view class="button buy" bind:tap="onBuyTap">立即购买</view>
+    <view class="button add" bind:tap="onAddTap">加入购物车</view>
+  </fixed-button>
+</view>

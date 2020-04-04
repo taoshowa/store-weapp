@@ -1,0 +1,15 @@
+<!-- components/goodItem/goodItem.wxml -->
+<view class="product-item" bind:tap="onGoodTap">
+  <view class="product-image">
+    <image src="{{item.imgUrl}}" class="image"/>
+  </view>
+  <view class="product-info">
+    <text class="name">{{item.productName}}</text>
+    <text class="info">{{item.productIntroduce}}</text>
+    <text class="price">￥{{item.price}}</text>
+  </view>
+  <button class="product-button" catch:tap="onAddTap">
+    <image src="/icons/common/add-cart.png" class="image"/>
+    <text class="text">加入购物车</text>
+  </button>
+</view>

@@ -1,0 +1,6 @@
+<!--components/fixedButton/fixedButton.wxml-->
+<view>
+  <view class="fixed-bottom" style="padding: {{padding}}; background-color: {{bgColor}}">
+    <slot/>
+  </view>
+</view>

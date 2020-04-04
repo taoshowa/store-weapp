@@ -1,0 +1,100 @@
+/* components/orderItem/orderItem.wxss */
+.order-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+  margin: 0 30rpx;
+  background-color: #fff;
+}
+
+.border {
+  border-bottom: 2rpx solid rgba(28, 27, 27, 0.1);
+}
+
+.order-info {
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.order-info .time {
+  margin-right: 20rpx;
+}
+
+.order-detail {
+  display: flex;
+  height: 124rpx;
+  align-items: center;
+}
+
+.order-detail + .order-detail {
+  margin-top: 30rpx;
+}
+
+.singleline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order-item image {
+  flex-shrink: 0;
+}
+
+.icon-checkbox {
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.item-img {
+  width: 160rpx;
+  height: 124rpx;
+}
+
+.item-right {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 44rpx;
+  overflow: hidden;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #3a3a3a;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+.item-info .name {
+  width: 70%;
+}
+
+.item-info .status {
+  max-width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.item-price {
+  color: #e23600;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+
+.item-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.remove {
+  color: #b1b1b1;
+  font-size: 24rpx;
+  font-weight: bold;
+}

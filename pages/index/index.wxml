@@ -1,0 +1,29 @@
+<!-- index.wxml -->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper">
+    <block wx:for="{{bannerList}}" wx:key="{{index}}">
+      <swiper-item data-id="{{item.id}}" bind:tap="onBannerTap">
+        <image src="{{item.bannerImg}}" class="swiper-image" mode="aspectFill" lazy-load />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="menu">
+    <view wx:for="{{menuList}}" wx:key="{{index}}" data-type="{{item.type}}" class="menu-item" bind:tap="onMenuTap">
+      <image src="{{item.icon}}" class="menu-image"/>
+      <text class="menu-text">{{item.text}}</text>
+    </view>
+  </view>
+
+  <view class="product-title">
+    <text class="title">产品展示</text>
+  </view>
+  <block wx:if="{{showData}}">
+    <view wx:if="{{goodList.length}}" class="product-list">
+      <block wx:for="{{goodList}}" wx:key="{{index}}">
+        <goodItem item="{{item}}" index="{{index}}" bind:click="onGoodClick" bind:add="onAddCart"/>
+      </block>
+    </view>
+    <view wx:else class="empty">暂无产品</view>
+  </block>
+</view>

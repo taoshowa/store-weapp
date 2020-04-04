@@ -1,0 +1,76 @@
+/* pages/good/good.wxss */
+.container {
+  margin-bottom: 110rpx;
+}
+
+.swiper {
+  width: 100%;
+  height: 580rpx;
+  background-color: #fff;
+}
+
+.swiper-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+}
+
+.good-info {
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.good-name,
+.detail-title {
+  color: #3a3a3a;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.good-intro {
+  color: #8e8e8e;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: 22rpx;
+}
+
+.good-price {
+  color: #e23600;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 35rpx;
+}
+
+.good-detail {
+  margin-top: 30rpx;
+  padding: 0 30rpx 30rpx;
+  background-color: #fff;
+}
+
+.detail-title {
+  padding: 24rpx 0;
+}
+
+.detail-desc {
+  color: #3a3a3a;
+  font-size: 28rpx;
+}
+
+.button.buy {
+  flex: 2;
+  height: 100%;
+  color: #fff;
+  background: linear-gradient(94deg, rgba(250, 62, 1, 1) 0%, rgba(255, 115, 40, 1) 100%);
+}
+
+.button.add {
+  flex: 1;
+  height: 100%;
+  color: #fff;
+  background-color: #ffb52f;
+}

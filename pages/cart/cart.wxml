@@ -1,0 +1,36 @@
+<!--pages/cart/cart.wxml-->
+<view class="container">
+  <block wx:if="{{cartList.length > 0}}">
+    <view class="cart-list">
+      <cart-Item wx:for="{{cartList}}" wx:key="{{index}}" good="{{item}}" index="{{index}}" counts="{{cartList.length}}"
+        bind:check="onGoodCheck" bind:remove="onGoodRemove" bind:change="onGoodChange" />
+    </view>
+
+    <view class="fixed-bottom cart-settle">
+      <view class="total">
+        <view class="left" bind:tap="checkAllGoods">
+          <image class="icon" src="{{checkAll ? '/icons/common/checked.png' : '/icons/common/check.png'}}"/>
+          <text>全选</text>
+        </view>
+        <view class="right">
+          合计(含运费):
+          <text class="text">￥{{priceTotal}}</text>
+          <text wx:if="{{priceTotal && pdFreight}}" class="text freight">+￥{{pdFreight}}</text>
+        </view>
+      </view>
+      <view wx:if="{{!hasAddressAuth}}" class="settle" bind:tap="openSetting">去结算<image class="icon" src="/icons/common/arrow-right.png"/></view>
+      <view wx:else class="settle" bind:tap="onSettleTap">去结算<image class="icon" src="/icons/common/arrow-right.png"/></view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="cart-empty">
+      <view class="title">您的购物车内没有商品</view>
+      <view class="nav">
+        <navigator class="button" url="/pages/index/index" open-type="switchTab">
+          <text class="text">去购物</text>
+          <image class="icon" src="/icons/common/arrow-right.png"/>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</view>

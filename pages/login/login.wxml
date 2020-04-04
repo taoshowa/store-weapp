@@ -1,0 +1,16 @@
+<!-- pages/login/login.wxml -->
+<view class="login-mobeil">
+  <text class="title">登录</text>
+  <form bindsubmit="handleLogin">
+    <view class="input-item">
+      <input name="mobile" type="number" focus placeholder-class="gray" placeholder="请输入手机号码" maxlength="11" />
+    </view>
+    <view class="input-item">
+      <input name="password" type="text" password placeholder-class="gray" placeholder="请输入密码" />
+    </view>
+    <view class="input-item login-btn">
+      <button disabled="{{isLoading}}" loading="{{isLoading}}" class="button login-button" form-type="submit">登录</button>
+    </view>
+  </form>
+  <view class="login-tip">未注册用户登录后自动注册</view>
+</view>

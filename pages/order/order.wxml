@@ -1,0 +1,13 @@
+<!--pages/order/order.wxml-->
+<view class="container">
+  <block wx:if="{{orderList.length > 0}}">
+    <view class="order-list">
+      <order-Item wx:for="{{orderList}}" wx:key="{{index}}" order="{{item}}" index="{{index}}" counts="{{total}}" bind:remove="onOrderRemove"/>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="order-empty">
+      <view class="title">暂无订单</view>
+    </view>
+  </block>
+</view>

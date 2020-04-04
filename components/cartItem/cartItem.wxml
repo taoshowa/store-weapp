@@ -1,0 +1,19 @@
+<!--components/cartItem/cartItem.wxml-->
+<view class="cart-item{{counts === index + 1 ? '' : ' border'}}">
+  <image class="icon-checkbox" src="{{good.checked ? '/icons/common/checked.png' : '/icons/common/check.png'}}" bind:tap="checkItem"/>
+  <image class="item-img" src="{{good.pdImage}}" mode="aspectFill"/>
+  <view class="item-right">
+    <view class="item-info">
+      <view class="name singleline">{{good.pdName}}</view>
+      <view class="number">
+        <image class="icon" src="/icons/common/minus.png" bind:tap="minusItem"/>
+        <text class="count">{{good.pdCount}}</text>
+        <image class="icon" src="/icons/common/plus.png" bind:tap="plusItem"/>
+      </view>
+    </view>
+    <view class="item-price">
+      <view class="remove" bind:tap="removeItem">删除</view>
+      <view class="price">￥{{good.pdTotalFee}}</view>
+    </view>
+  </view>
+</view>

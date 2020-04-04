@@ -1,0 +1,23 @@
+<!--components/orderItem/orderItem.wxml-->
+<view class="order-item{{counts === index + 1 ? '' : ' border'}}">
+  <view class="order-info">
+    <text class="time">{{order.createTime}}</text>
+    <text class="number">订单号：{{order.orderId}}</text>
+  </view>
+  <view wx:for="{{order.orderDetails}}" class="order-detail">
+    <image class="item-img" src="{{item.pdImage}}" mode="aspectFill"/>
+    <view class="item-right">
+      <view class="item-info">
+        <view class="name singleline">{{item.pdName}}</view>
+        <view wx:if="{{item.state == 10}}" class="status">待支付</view>
+        <view wx:elif="{{item.state == 20}}" class="status">待发货</view>
+        <view wx:elif="{{item.state == 25}}" class="status">待收货</view>
+        <view wx:elif="{{item.state == 40}}" class="status">已完成</view>
+      </view>
+      <view class="item-price">￥{{item.pdUnitPrice}}</view>
+      <!-- <view class="item-bottom">
+        <view class="remove" bind:tap="removeItem">删除</view>
+      </view> -->
+    </view>
+  </view>
+</view>

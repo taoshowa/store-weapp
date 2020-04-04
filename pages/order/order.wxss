@@ -1,0 +1,18 @@
+/* pages/order/order.wxss */
+.container {
+  padding-top: 30rpx;
+}
+
+.order-list {
+  background-color: #fff;
+}
+
+.order-empty {
+  margin-top: 50rpx;
+  text-align: center;
+}
+
+.order-empty .title {
+  color: #3a3a3a;
+  font-size: 30rpx;
+}

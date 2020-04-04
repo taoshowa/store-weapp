@@ -1,0 +1,4 @@
+<!--pages/invoice/invoice.wxml-->
+<view class="container">
+  <view class="empty">请登陆PC网站查看</view>
+</view>

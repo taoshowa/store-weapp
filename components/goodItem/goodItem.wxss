@@ -1,0 +1,85 @@
+/* components/goodItem/goodItem.wxss */
+.product-item {
+  position: relative;
+  display: flex;
+  padding: 40rpx 40rpx 40rpx 28rpx;
+  background-color: #fff;
+  margin-bottom: 34rpx;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 212rpx;
+  height: 194rpx;
+  background-color: rgba(243, 243, 243, .58);
+  border-radius: 10rpx;
+}
+
+.product-image .image {
+  width: 187rpx;
+  height: 146rpx;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 38rpx;
+}
+
+.product-info .name {
+  color: #3a3a3a;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+  line-height: 33rpx;
+}
+
+.product-info .info {
+  color: #8e8e8e;
+  font-size: 26rpx;
+  font-family: PingFangSC-Light;
+  font-weight: bold;
+  margin-top: 26rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-info .price {
+  color: #e23600;
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: bold;
+  line-height: 23rpx;
+  margin-top: 38rpx;
+}
+
+.product-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 40rpx;
+  bottom: 40rpx;
+  line-height: 1;
+  padding: 10rpx 17rpx 10rpx 15rpx;
+  background: linear-gradient(90deg, rgba(250, 63, 1, 1) 0%, rgba(255, 114, 39, 1) 100%);
+  border-radius: 10rpx;
+}
+
+.product-button .image {
+  width: 34rpx;
+  height: 32rpx;
+}
+
+.product-button .text {
+  color: #f9f5df;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+  margin-left: 10rpx;
+}

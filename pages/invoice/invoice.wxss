@@ -1,0 +1,12 @@
+/* pages/invoice/invoice.wxss */
+.container {
+  padding-top: 20rpx;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  color: #1b1b1b;
+  font-size: 30rpx;
+  margin-top: 200rpx;
+}

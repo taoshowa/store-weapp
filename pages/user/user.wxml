@@ -1,0 +1,43 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="user-header">
+    <view class="user-info" bind:tap="onAvatarTap">
+      <view class="userinfo-avatar">
+        <image wx:if="{{userInfo.headImg}}" src="{{userInfo.headImg}}" mode="aspectFill"/>
+        <open-data wx:else type="userAvatarUrl"></open-data>
+      </view>
+      <view wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</view>
+      <open-data  wx:else type="userNickName"></open-data>
+    </view>
+  </view>
+  <view class="user-nav">
+    <view class="nav-item" bind:tap="onOrderTap">
+      <view class="item-left">
+        <image class="icon" src="/icons/common/order.png"/>
+        <view class="text">订单 (<text class="number">{{orderCount}}</text>)</view>
+      </view>
+      <image class="arrow" src="/icons/common/arrow-right.png"/>
+    </view>
+    <view wx:if="{{!hasAddressAuth}}" class="nav-item" bind:tap="openSetting">
+      <view class="item-left">
+        <image class="icon" src="/icons/common/address.png"/>
+        <view class="text">收货地址</view>
+      </view>
+      <image class="arrow" src="/icons/common/arrow-right.png"/>
+    </view>
+    <view wx:else class="nav-item" bind:tap="onAddressTap">
+      <view class="item-left">
+        <image class="icon" src="/icons/common/address.png"/>
+        <view class="text">收货地址</view>
+      </view>
+      <image class="arrow" src="/icons/common/arrow-right.png"/>
+    </view>
+    <!-- <view class="nav-item" bind:tap="onInvoiceTap">
+      <view class="item-left">
+        <image class="icon" src="/icons/common/invoice.png"/>
+        <view class="text">发票</view>
+      </view>
+      <image class="arrow" src="/icons/common/arrow-right.png"/>
+    </view> -->
+  </view>
+</view>
